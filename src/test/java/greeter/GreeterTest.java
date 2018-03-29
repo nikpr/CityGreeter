@@ -2,8 +2,6 @@ package greeter;
 
 import greet_generator.GreetGenerator;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import static org.hamcrest.CoreMatchers.is;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -11,8 +9,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
 
 public class GreeterTest {
 
@@ -20,7 +16,6 @@ public class GreeterTest {
     private static ResourceBundle bundle;
 
     private String city;
-    private int hours;
     private String result;
 
     public GreeterTest() {

@@ -1,6 +1,6 @@
 package argument_parser;
 
-import static org.hamcrest.CoreMatchers.is;
+import city.City;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -11,16 +11,21 @@ import static org.junit.Assert.*;
 public class ArgumentParserTest {
 
     private final ArgumentParser parser;
-    private String[] args = {"Vancouver", "America/Vancouver"};
-    private boolean result;
 
     public ArgumentParserTest() {
         parser = new ArgumentParser();
     }
 
+    @BeforeClass
+    public static void setUpClass() {
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+    }
+
     @Before
     public void setUp() {
-
     }
 
     @After
@@ -28,33 +33,11 @@ public class ArgumentParserTest {
     }
 
     @Test
-    public void testIsValidArguments() throws Exception {
-        System.out.println("isValidArguments");
-        result = parser.isValidArguments(args);
-        assertTrue(result);
+    public void testParseArguments() throws Exception {
+        System.out.println("Testing parseArguments");
+        String[] args = {"Malabo", "Africa/Malabo"};
+        City city = parser.parseArguments(args);
+        assertNotNull(city);
     }
-
-    @Test
-    public void testIsValidArgumentsWithException() throws Exception {
-        System.out.println("Testing isValidArguments with wrong args");
-        String [] args = {"Vancouver", "America /Vancouver"};
-        try {
-           result = parser.isValidArguments(args);
-        } catch (IllegalArgumentException exception) {
-             assertThat(exception.getMessage(), is("Illegal argument"));
-        }
-    }
-    
-     @Test
-    public void testIsValidArgumentsWithinvalidLength() throws Exception {
-        System.out.println("Testing isValidArguments with wrong args");
-        String [] args = {"Vancouver", "America /Vancouver","America"};
-        try {
-           result = parser.isValidArguments(args);
-        } catch (Exception exception) {
-             assertThat(exception.getMessage(), is("Wrong number of arguments"));
-        }
-    }
-    
 
 }

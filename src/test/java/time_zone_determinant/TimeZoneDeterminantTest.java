@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 public class TimeZoneDeterminantTest {
 
-    private TimeZoneDeterminant determinant;
+    private final TimeZoneDeterminant determinant;
     private String timeZone;
     private String city;
 

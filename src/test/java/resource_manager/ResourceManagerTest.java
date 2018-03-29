@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package resource_manager;
 
 import java.util.Locale;
@@ -16,7 +11,7 @@ import static org.junit.Assert.*;
 
 public class ResourceManagerTest {
 
-    private ResourceManager manager;
+    private final ResourceManager manager;
     private ResourceBundle result;
     private Locale locale;
     
