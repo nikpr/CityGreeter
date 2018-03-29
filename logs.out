@@ -1,0 +1,4 @@
+2018-03-29 15:42:04 INFO  App:19 - Greetings forMalabo
+2018-03-29 15:44:42 ERROR App:21 - java.lang.IllegalArgumentException: Illegal argument
+2018-03-29 15:45:59 ERROR App:21 - java.lang.IllegalArgumentException: Illegal argument
+2018-03-29 15:46:48 INFO  App:19 - Greetings for: Malabo
